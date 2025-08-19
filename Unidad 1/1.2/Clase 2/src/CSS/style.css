@@ -1,0 +1,77 @@
+*{/*Reiniciar el estilo de todos los elementos
+     para evitar inconsistencia entre navegadores*/
+    box-sizing: border-box; /*Garantizar que el relleno
+    y el borde esten incluidos en ek ancho y largo del elemento*/
+    font-family: sans-serif; /*Fuente por defecto para el texto*/
+    text-align: center; /*Alinea el texto al centro por defecto*/
+}
+
+h1{
+    color: aqua; /*Color del titulo*/
+margin-bottom: 1rem; /*Espacio debajo del titulo*/
+}
+
+body{
+    margin: 0; /*Eliminar el margen por defecto del body*/
+    height: 100vh; /*Altura completa del navegador, 100vh significa que el cuerpo ocupa el 100 de la altura de la ventana de el navegador*/
+    display: flex; /*Utilizar el flex para centrar el contenido*/
+    align-items: center; /*Alinear los elementos verticalmente al centro*/
+    justify-content:  center;/*Alinear los elementos horizontalmente al centro*/
+    background: cornflowerblue; /*Le da un color a el fondo*/
+}
+
+button{
+    background: #f2f3f7; /*Definir el color de fondo de los colores*/
+    border: none; 
+    border-radius: 40%;
+    padding: 1rem; /*Espaciado interno para los botones*/
+    font-size: 1.1rem;
+    font-weight: bold; /*Negrita para un texto de los botones*/
+    box-shadow: 4px 4px 10px #ccc, -4px -4px 10px #fff; /*Aplicamos sombras a los botones*/
+    transition: all 0.2s, transform 0.1s; /*Transicion suave para observar los cambios de estilos*/
+    cursor: pointer; /*cambiar el cursor al pasar sobre los botones*/
+}
+
+button:hover{
+    box-shadow: inset 2px 2px 6p #bbb, insert -2px -2px 6px #fff;
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}/*efecto al pasar el cursor por los botones*/ 
+
+.calculadora{
+background: #fff;
+border-radius: 20px;
+box-shadow: 0 8px 25px #0000001a;
+display:  flex;
+flex-direction: column; /*Organizar los elementos en columnas*/
+gap: 1rem;
+width: 90%;
+max-width : 320 px;
+}
+
+.display{
+
+    background: #e8f3f3;
+    border-radius: 20px;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: right;
+    color: black;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.2;
+}
+
+.buttons{
+
+    display: grid; /*organizar en tabla*/
+    grid-template-columns: repeat(4,1fr); /*crea una cuadricula con 4 columnas de igual tamaño*/
+    gap: 0.7rem;/*espacio entre los botones*/
+}
+
+.igual {
+
+    grid-column: span 2;
+    border-radius: 30px;
+    background: rgba(120,221,217);
+    color: white;
+}
