@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset='utf-8'>
+    <title>Calculadora</title>
+    <link rel="icon" href="assets/CalcLogo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <!--Contenedor principal-->
+    <div class="calculadora" style="background-color: rgba(33, 137, 168, 0.637); padding: 20px;">
+        <h1>Calculadora</h1> 
+        <!--Contenedor para la pantalla de la calculadora-->
+        <div id="display" class="display" style="background-color: rgba(255, 255, 255, 0.548);">
+            0
+        </div>
+        <!--Contenedor para los botones de la calculadora-->
+        <div id="buttons" class="buttons" style="background-color: rgba(196, 154, 196, 0.507);">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="deleteLast()">DEL</button>
+            <button onclick="append('%')">%</button> 
+            <button onclick="append('/')">/</button>
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button onclick="append('*')">*</button>  
+            <button onclick="append('4')">4</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button onclick="append('-')">-</button>  
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            <button onclick="append('+')">+</button>  
+            <button onclick="append('.')">.</button>
+            <button onclick="append('0')">0</button> 
+            <button onclick="calculate()" class="igual">=</button>
+        </div>
+    </div>
+    <audio id="click-sound" src="assets/digital-click-357350.mp3"></audio>
+    <script src="assets/js/funciones.js"></script>
+</body>
+</html>
